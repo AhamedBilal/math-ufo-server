@@ -1,11 +1,12 @@
 const Sequelize = require('sequelize');
 const config = require('./app-config');
 
-const sequelize = new Sequelize(config.DATABASE, config.USER, config.PASSWORD, {
-    host: 'localhost',
-    dialect: 'mysql',
-
-});
+const sequelize = new Sequelize("sqlite::memory:");
+// const sequelize = new Sequelize(config.DATABASE, config.USER, config.PASSWORD, {
+//     host: 'localhost',
+//     dialect: 'mysql',
+//
+// });
 
 sequelize
     .authenticate()
