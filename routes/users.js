@@ -5,6 +5,7 @@ const config = require('../config/app-config');
 const {errorResponse, successResponse, uniqueId} = require("../helpers");
 
 var express = require('express');
+const {Sequelize} = require("sequelize");
 var router = express.Router();
 
 /* GET users listing. */
@@ -85,7 +86,6 @@ router.put('/:userId/score', async (req, res) => {
         return errorResponse(req, res, error.message);
     }
 });
-
 
 router.get('/', async (req, res) => {
     try {
