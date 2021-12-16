@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
             config.SECRET,
         );
         delete user.dataValues.password;
-        return successResponse(req, res, {id: user.id, highScore: user.highScore || 0, token: token});
+        return successResponse(req, res, {id: user.id, highScore: user.highScore, name: user.name || 0, token: token});
     } catch (error) {
         console.log(error);
         return errorResponse(req, res, error.message);
