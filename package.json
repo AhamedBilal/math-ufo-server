@@ -4,8 +4,9 @@
   "private": true,
   "author": "Ahamed Bilal",
   "license": "MIT",
+  "main": "./bin/www",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "engines": {
     "node": "16.x"
@@ -21,10 +22,10 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.12.0-alpha.1"
+    "sequelize": "^6.12.0-alpha.1",
+    "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
     "sequelize-cli": "^6.3.0"
   }
 }
